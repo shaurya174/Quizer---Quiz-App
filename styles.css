@@ -1,0 +1,32 @@
+.custom-navbar {
+    background-color: #343a40; /* Dark gray background */
+    padding: 0.75rem 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Brand text style */
+.custom-navbar .navbar-brand {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.25rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Logo image styling */
+.custom-navbar .navbar-brand img {
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect on brand */
+.custom-navbar .navbar-brand:hover {
+    color: #ffc107; /* Bootstrap warning color for hover effect */
+}
+
+/* Logo hover zoom */
+.custom-navbar .navbar-brand img:hover {
+    transform: scale(1.1);
+}

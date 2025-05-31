@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>History Quiz</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 10px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #00ffe7;
+      text-shadow: 0 0 10px #00ffe770;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    .question {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .options {
+      width: 100%;
+      max-width: 900px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .option {
+      padding: 20px;
+      border-radius: 12px;
+      font-size: 1.2rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+      text-align: center;
+      color: #fff;
+    }
+
+    .option1 {
+      background-color: rgba(255, 99, 132, 0.15);
+    }
+
+    .option2 {
+      background-color: rgba(54, 162, 235, 0.15);
+    }
+
+    .option3 {
+      background-color: rgba(75, 192, 192, 0.15);
+    }
+
+    .option4 {
+      background-color: rgba(255, 206, 86, 0.15);
+    }
+
+    .option1:hover {
+      background-color: rgba(255, 99, 132, 0.3);
+      box-shadow: 0 0 10px rgba(255, 99, 132, 0.6);
+    }
+
+    .option2:hover {
+      background-color: rgba(54, 162, 235, 0.3);
+      box-shadow: 0 0 10px rgba(54, 162, 235, 0.6);
+    }
+
+    .option3:hover {
+      background-color: rgba(75, 192, 192, 0.3);
+      box-shadow: 0 0 10px rgba(75, 192, 192, 0.6);
+    }
+
+    .option4:hover {
+      background-color: rgba(255, 206, 86, 0.3);
+      box-shadow: 0 0 10px rgba(255, 206, 86, 0.6);
+    }
+
+    .selected {
+      background-color: #00ffe7 !important;
+      color: #000 !important;
+      font-weight: 700;
+      border: 2px solid #00ffe7;
+      box-shadow: 0 0 12px #00ffe7;
+    }
+
+    .buttons {
+      margin-top: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .btn {
+      padding: 12px 25px;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 30px;
+      cursor: pointer;
+      border: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn-danger {
+      background-color: #ff4b5c;
+      color: #fff;
+    }
+
+    .btn-success {
+      background-color: #3fc1c9;
+      color: #000;
+    }
+
+    .btn-primary {
+      background-color: #3d5af1;
+      color: #fff;
+    }
+
+    .btn-warning {
+      background-color: #ffc107;
+      color: #000;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+    }
+
+    #ans_result {
+      margin-top: 30px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    #current_result {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #00ffe7;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      background: rgba(0, 0, 0, 0.3);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📜 History Quiz</h1>
+  </header>
+
+  <main>
+    <div id="current_result"></div>
+    <div class="question">
+      <div id="counter">Question 1</div>
+      <div id="curr_ques">Loading question...</div>
+    </div>
+
+    <div class="options">
+      <div id="option1" class="option option1" onclick="selectOption(this)"></div>
+      <div id="option2" class="option option2" onclick="selectOption(this)"></div>
+      <div id="option3" class="option option3" onclick="selectOption(this)"></div>
+      <div id="option4" class="option option4" onclick="selectOption(this)"></div>
+    </div>
+
+    <div id="ans_result"></div>
+
+    <div class="buttons">
+      <button id="exit_quiz" class="btn btn-danger">Exit Quiz</button>
+      <button id="check_ans" class="btn btn-success">Check</button>
+      <button id="want_next" class="btn btn-primary">Next Question</button>
+      <button id="view_result" class="btn btn-warning">View Current Result</button>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Shaurya Mittal
+  </footer>
+
+  <script>
+    function selectOption(selected) {
+      document.querySelectorAll('.option').forEach(opt => opt.classList.remove('selected'));
+      selected.classList.add('selected');
+    }
+  </script>
+
+  <!-- External JavaScript -->
+  <script src="../JS_FILES/hist.js"></script>
+</body>
+</html>

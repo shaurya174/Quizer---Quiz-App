@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  background-size: 300% 300%;
+  animation: gradientShift 15s ease infinite;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.contact-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 800px;
+  width: 90%;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.contact-card:hover {
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.role {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ffd166;
+  margin-bottom: 1.5rem;
+}
+
+.bio {
+  font-size: 1rem;
+  line-height: 1.7;
+  text-align: justify;
+  margin-bottom: 1.5rem;
+  color: #e0e0e0;
+}
+
+.info-section {
+  text-align: left;
+  font-size: 1rem;
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.info-section p {
+  margin: 8px 0;
+}
+
+.info-section strong {
+  width: 100px;
+  display: inline-block;
+  color: #ffd166;
+}
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  font-size: 26px;
+  margin: 0 12px;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ffd166;
+  transform: scale(1.2);
+}
+
+.quote {
+  margin-top: 25px;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #ffebcd;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 15px;
+}
+
+a {
+  color: #90e0ef;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

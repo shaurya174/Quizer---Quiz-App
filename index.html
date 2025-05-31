@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QUIZ APP</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(to bottom right, #6a11cb, #2575fc);
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: #fff;
+      }
+
+      .custom-navbar {
+        background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+        padding: 1rem;
+      }
+
+      .custom-navbar .navbar-brand {
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 1.4rem;
+      }
+
+      .custom-navbar .navbar-brand:hover {
+        color: #cce3ff;
+      }
+
+      section {
+        padding: 80px 0;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        margin: 40px auto;
+        max-width: 1200px;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+      }
+
+      h2 {
+        font-weight: 700;
+        color: #ffffff;
+      }
+
+      p.lead,
+      p,
+      li {
+        font-size: 1.1rem;
+        color: #f0f0f0;
+      }
+
+      ul li {
+        margin-bottom: 12px;
+      }
+
+      .btn-primary {
+        background-color: #ffffff;
+        color: #0d6efd;
+        font-weight: bold;
+        border: none;
+        padding: 10px 20px;
+        transition: 0.3s ease-in-out;
+      }
+
+      .btn-primary:hover {
+        background-color: #cce3ff;
+        color: #0a58ca;
+        transform: scale(1.08);
+      }
+
+      footer {
+        background-color: #00000090;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+        margin-top: 40px;
+        font-size: 1rem;
+        border-top: 2px solid #ffffff33;
+      }
+
+      footer span {
+        font-weight: 600;
+        color: #cce3ff;
+      }
+
+      .rounded {
+        border-radius: 16px !important;
+      }
+
+      .shadow-sm {
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2) !important;
+      }
+
+      @media (max-width: 767px) {
+        section {
+          padding: 40px 20px;
+        }
+
+        h2 {
+          font-size: 1.5rem;
+        }
+      }
+      .card:hover {
+        transform: translateY(-5px);
+        transition: 0.3s ease-in-out;
+      }
+      .card-img-top {
+        height: 180px;
+        object-fit: cover;
+        background-color: #e9ecef;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar custom-navbar">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="./Resources/logo.png"
+            alt="Logo"
+            width="30"
+            height="30"
+            class="d-inline-block align-text-top me-2"
+          />
+          Quizer - Test Your Knowledge
+        </a>
+      </div>
+    </nav>
+    <section>
+      <div class="container-fluid px-5">
+        <div class="row align-items-center">
+          <div class="col-md-6 order-md-1 order-2">
+            <h2 class="mb-4">Welcome to the Ultimate Quiz Zone! 🧠</h2>
+            <p class="lead">
+              Dive into a world of knowledge and fun with our interactive Quiz
+              App. Whether you're a trivia enthusiast or just looking to sharpen
+              your skills, we've got something for everyone!
+            </p>
+            <ul class="list-unstyled">
+              <li>
+                ✅ Choose from multiple quiz categories – Tech, History, Sports,
+                Movies, and more.
+              </li>
+              <li>
+                ✅ Play at your own pace and challenge your knowledge anytime,
+                anywhere.
+              </li>
+              <li>
+                ✅ Instant feedback on each question to help you learn and
+                improve.
+              </li>
+              <li>
+                ✅ Clean, modern UI designed for both mobile and desktop users.
+              </li>
+            </ul>
+            <p>
+              Ready to test your brainpower? Scroll down and select your
+              favorite quiz category to begin!
+            </p>
+            <a href="#quizes" class="btn btn-primary mt-3">Start Quiz</a>
+            <a href="Contact/contact.html" class="btn btn-primary mt-3">Contact Me</a>
+          </div>
+
+          <div class="col-md-6 order-md-2 order-1 mb-4 mb-md-0 text-center">
+            <img
+              src="./Resources/quiz.jpeg"
+              alt="Quiz Illustration"
+              class="img-fluid rounded shadow-sm"
+              style="max-width: 95%"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-5" style="background-color: #e9f2ff">
+      <div class="container px-4">
+        <h2 class="text-center text-primary mb-4">About This Project</h2>
+
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <div class="card shadow-sm border-0 rounded p-4">
+              <div class="card-body">
+                <p class="text-dark fs-5 mb-3">
+                  Hello! I'm
+                  <span class="fw-bold text-primary">Shaurya Mittal</span> — a
+                  passionate web developer with a love for building clean,
+                  responsive, and meaningful digital experiences.
+                </p>
+                <p class="text-muted mb-3">
+                  This quiz platform was crafted using <strong>HTML</strong>,
+                  <strong>CSS</strong>, and <strong>JavaScript</strong>, along
+                  with the power of <strong>Bootstrap 5</strong> and Flexbox for
+                  smooth responsiveness and modern layout structure.
+                </p>
+                <p class="text-muted mb-4">
+                  It's not just a quiz — it's an interactive experience designed
+                  to make learning more engaging and fun.
+                </p>
+
+                <a
+                  href="https://github.com/your-github-username/your-project-name"
+                  target="_blank"
+                  class="btn btn-primary px-4"
+                >
+                  Check GitHub Project
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="quizes" class="bg-light py-5">
+      <div class="container-fluid px-5">
+        <h2 class="text-center text-primary mb-5">Categories Offered</h2>
+        <div class="row g-4">
+          <!-- Art -->
+          <div class="col-sm-6 col-md-4">
+            <div class="card h-100 shadow-sm border-0 rounded">
+              <img
+                src="./Resources/anime.jpeg"
+                class="card-img-top"
+                alt="Art Quiz"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-primary">Anime</h5>
+                <p class="card-text flex-grow-1 text-danger">
+                  Explore famous anime characters.
+                </p>
+                <a
+                  href="./START_QUIZES/anime_start.html"
+                  class="btn btn-primary mt-2"
+                  >Go to Quiz</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Films -->
+          <div class="col-sm-6 col-md-4">
+            <div class="card h-100 shadow-sm border-0 rounded">
+              <img
+                src="./Resources/movie1.jpg"
+                class="card-img-top"
+                alt="Films Quiz"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-primary">Films</h5>
+                <p class="card-text flex-grow-1 text-danger">
+                  Test your knowledge on movies, directors, and cinematic
+                  history.
+                </p>
+                <a
+                  href="./START_QUIZES/films_start.html"
+                  class="btn btn-primary mt-2"
+                  >Go to Quiz</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Geography -->
+          <div class="col-sm-6 col-md-4">
+            <div class="card h-100 shadow-sm border-0 rounded">
+              <img
+                src="./Resources/map.jpeg"
+                class="card-img-top"
+                alt="Geography Quiz"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-primary">Geography</h5>
+                <p class="card-text flex-grow-1 text-danger">
+                  Countries, capitals, landforms, and world geography trivia.
+                </p>
+                <a
+                  href="./START_QUIZES/geo_start.html"
+                  class="btn btn-primary mt-2"
+                  >Go to Quiz</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- General Knowledge -->
+          <div class="col-sm-6 col-md-4">
+            <div class="card h-100 shadow-sm border-0 rounded">
+              <img
+                src="./Resources/brain.jpeg"
+                class="card-img-top"
+                alt="General Knowledge Quiz"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-primary">General Knowledge</h5>
+                <p class="card-text flex-grow-1 text-danger">
+                  A mix of interesting facts and questions from all domains.
+                </p>
+                <a
+                  href="./START_QUIZES/gk_start.html"
+                  class="btn btn-primary mt-2"
+                  >Go to Quiz</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- History -->
+          <div class="col-sm-6 col-md-4">
+            <div class="card h-100 shadow-sm border-0 rounded">
+              <img
+                src="./Resources/italy.png"
+                class="card-img-top"
+                alt="History Quiz"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-primary">History</h5>
+                <p class="card-text flex-grow-1 text-danger">
+                  Events, leaders, and civilizations that shaped our world.
+                </p>
+                <a
+                  href="./START_QUIZES/hist_start.html"
+                  class="btn btn-primary mt-2"
+                  >Go to Quiz</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Music -->
+          <div class="col-sm-6 col-md-4">
+            <div class="card h-100 shadow-sm border-0 rounded">
+              <img
+                src="./Resources/sound.jpg"
+                class="card-img-top"
+                alt="Music Quiz"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-primary">Music</h5>
+                <p class="card-text flex-grow-1 text-danger">
+                  Genres, instruments, artists, and world music trivia.
+                </p>
+                <a
+                  href="./START_QUIZES/music_start.html"
+                  class="btn btn-primary mt-2"
+                  >Go to Quiz</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Nature -->
+          <div class="col-sm-6 col-md-4">
+            <div class="card h-100 shadow-sm border-0 rounded">
+              <img
+                src="./Resources/nat.jpg"
+                class="card-img-top"
+                alt="Nature Quiz"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-primary">Nature</h5>
+                <p class="card-text flex-grow-1 text-danger">
+                  Wildlife, plants, ecosystems, and the beauty of our planet.
+                </p>
+                <a
+                  href="./START_QUIZES/nature_start.html"
+                  class="btn btn-primary mt-2"
+                  >Go to Quiz</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Television -->
+          <div class="col-sm-6 col-md-4">
+            <div class="card h-100 shadow-sm border-0 rounded">
+              <img
+                src="./Resources/tele.jpg"
+                class="card-img-top"
+                alt="Television Quiz"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-primary">Television</h5>
+                <p class="card-text flex-grow-1 text-danger">
+                  Test your knowledge of shows, sitcoms, and TV history.
+                </p>
+                <a
+                  href="./START_QUIZES/tele_start.html"
+                  class="btn btn-primary mt-2"
+                  >Go to Quiz</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Automobiles -->
+          <div class="col-sm-6 col-md-4">
+            <div class="card h-100 shadow-sm border-0 rounded">
+              <img
+                src="./Resources/cars.jpg"
+                class="card-img-top"
+                alt="Automobiles Quiz"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-primary">Vehicles</h5>
+                <p class="card-text flex-grow-1 text-danger">
+                  Cars, brands, engines, and the evolution of the automobile.
+                </p>
+                <a
+                  href="./START_QUIZES/vehicle_start.html"
+                  class="btn btn-primary mt-2"
+                  >Go to Quiz</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-5" style="background-color: #f5f9ff">
+      <div class="container">
+        <h2 class="text-center text-primary mb-5">Technologies Used</h2>
+        <div class="row g-4">
+          <!-- One card = one cell in 3x3 grid -->
+          <div class="col-md-4 text-center">
+            <div class="bg-white shadow-sm rounded p-3 h-100">
+              <div
+                class="bg-light rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3"
+                style="width: 80px; height: 80px"
+              >
+                <img
+                  src="./Resources/html5-removebg-preview.png"
+                  alt="HTML5"
+                  class="img-fluid"
+                  style="width: 40px"
+                />
+              </div>
+              <h6 class="text-primary">HTML5</h6>
+              <p class="small text-muted">Foundation of all web pages.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4 text-center">
+            <div class="bg-white shadow-sm rounded p-3 h-100">
+              <div
+                class="bg-light rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3"
+                style="width: 80px; height: 80px"
+              >
+                <img
+                  src="./Resources/css.png"
+                  alt="CSS3"
+                  class="img-fluid"
+                  style="width: 40px"
+                />
+              </div>
+              <h6 class="text-primary">CSS3</h6>
+              <p class="small text-muted">Styles and design polish.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4 text-center">
+            <div class="bg-white shadow-sm rounded p-3 h-100">
+              <div
+                class="bg-light rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3"
+                style="width: 80px; height: 80px"
+              >
+                <img
+                  src="./Resources/bootst.png"
+                  alt="Bootstrap"
+                  class="img-fluid"
+                  style="width: 40px"
+                />
+              </div>
+              <h6 class="text-primary">Bootstrap</h6>
+              <p class="small text-muted">Grid system & UI helpers.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4 text-center">
+            <div class="bg-white shadow-sm rounded p-3 h-100">
+              <div
+                class="bg-light rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3"
+                style="width: 80px; height: 80px"
+              >
+                <img
+                  src="./Resources/js-removebg-preview (1).png"
+                  alt="JavaScript"
+                  class="img-fluid"
+                  style="width: 40px"
+                />
+              </div>
+              <h6 class="text-primary">JavaScript</h6>
+              <p class="small text-muted">Logic & interactivity engine.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4 text-center">
+            <div class="bg-white shadow-sm rounded p-3 h-100">
+              <div
+                class="bg-light rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3"
+                style="width: 80px; height: 80px"
+              >
+                <img
+                  src="./Resources/git.png"
+                  alt="Git"
+                  class="img-fluid"
+                  style="width: 40px"
+                />
+              </div>
+              <h6 class="text-primary">Git</h6>
+              <p class="small text-muted">Uploading My Project</p>
+            </div>
+          </div>
+
+          <div class="col-md-4 text-center">
+            <div class="bg-white shadow-sm rounded p-3 h-100">
+              <div
+                class="bg-light rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3"
+                style="width: 80px; height: 80px"
+              >
+                <img
+                  src="./Resources/github.png"
+                  alt="GitHub"
+                  class="img-fluid"
+                  style="width: 40px"
+                />
+              </div>
+              <h6 class="text-primary">GitHub</h6>
+              <p class="small text-muted">My project’s showcase shelf.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4 text-center">
+            <div class="bg-white shadow-sm rounded p-3 h-100">
+              <div
+                class="bg-light rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3"
+                style="width: 80px; height: 80px"
+              >
+                <img
+                  src="./Resources/open.png"
+                  alt="Open Trivia DB"
+                  class="img-fluid"
+                  style="width: 40px"
+                />
+              </div>
+              <h6 class="text-primary">Open Trivia DB</h6>
+              <p class="small text-muted">Trivia brain powering the quiz.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4 text-center">
+            <div class="bg-white shadow-sm rounded p-3 h-100">
+              <div
+                class="bg-light rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3"
+                style="width: 80px; height: 80px"
+              >
+                <img
+                  src="./Resources/vs.png"
+                  alt="VS Code"
+                  class="img-fluid"
+                  style="width: 40px"
+                />
+              </div>
+              <h6 class="text-primary">VS Code</h6>
+              <p class="small text-muted">The coding cockpit I flew in.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4 text-center">
+            <div class="bg-white shadow-sm rounded p-3 h-100">
+              <div
+                class="bg-light rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3"
+                style="width: 80px; height: 80px"
+              >
+                <img
+                  src="./Resources/netligy.png"
+                  alt="Netlify"
+                  class="img-fluid"
+                  style="width: 40px"
+                />
+              </div>
+              <h6 class="text-primary">Netlify</h6>
+              <p class="small text-muted">Liftoff pad for hosting.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>Made with ❤️ by <span>Shaurya Mittal</span></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
